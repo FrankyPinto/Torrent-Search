@@ -2,6 +2,8 @@ import tkinter as tk
 import selenium
 from selenium import webdriver
 
+/* Selenium library required */
+
 win1=tk.Tk()
 win1.title("TORRENT SEARCH")
 k=tk.Frame(win1)
@@ -10,8 +12,8 @@ ent1=tk.Entry(k)
 ent1.place(x=1,y=40,width=195,height=25)
 def sub(event):
 	fran=ent1.get()
-	browser=webdriver.Chrome('D:/franky/a-python/chromedriver')
-	browser.get("https://1337xto.to/")
+	browser=webdriver.Chrome('D:/chromedriver')     /* Your webdriver location here */
+	browser.get("https://1337xto.to/")              /* Site you want to target */
 	ele=browser.find_element_by_id('autocomplete')
 	ele.send_keys(fran)
 	entbut=browser.find_element_by_class_name('i-search')
@@ -25,3 +27,6 @@ def quiit():
 but5=tk.Button(k,text="Quit",command=quiit)
 but5.place(x=100,y=80)
 win1.mainloop()
+
+/* Download the webdriver as per your system and browser */
+/* If code does not output result you need to check if your browser version and webdriver version match */
