@@ -3,7 +3,5 @@
 Demonstration of Python GUI working with Selenium.
 
 # Requirements:
-* Python 3.5+
-* tkinter
-* selenium
-* chrome webdriver
+selenium==3.141.0
+urllib3==1.26.4
